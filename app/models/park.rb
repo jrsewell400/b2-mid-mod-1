@@ -3,6 +3,14 @@ class Park < ApplicationRecord
   has_many :rides
 
   def list_rides 
-    rides.select(:name).order(:name)
+    rides.order(name: :asc)
+  end
+
+  def avg_rating 
+    if self.rides.empty?
+      0
+    else 
+      rides.average(:rating)
+    end
   end
 end

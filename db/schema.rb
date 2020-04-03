@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20200403152353) do
 
   create_table "rides", force: :cascade do |t|
     t.string "name"
-    t.string "rating"
+    t.integer "rating"
     t.bigint "park_id"
     t.index ["park_id"], name: "index_rides_on_park_id"
   end

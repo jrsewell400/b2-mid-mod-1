@@ -1,0 +1,22 @@
+<h1><%= @mechanic.name %>'s Mechanic Information</h1>
+
+<section class="mechanic-info">
+  Name: <%= @mechanic.name %></br>
+  Years of Experience: <%= @mechanic.experience %></br></br>
+</section>
+
+<section class="mechanic-rides">
+  Current rides they're working on:</br> 
+  <% @mechanic.rides.each do |ride| %>
+    <%= ride.name %></br>
+  <% end %>
+</section>
+
+<section class="add-ride">
+Enter a Ride ID:
+  <%= form_tag "/mechanics/#{@mechanic.id}" do %>
+    <%= label_tag :ride %>
+    <%= text_field_tag :ride %>
+    <%= submit_tag "Submit" %>
+  <% end %>
+</section>

@@ -1,14 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Ride, type: :model do 
+RSpec.describe Mechanic, type: :model do 
   describe "validations" do 
     it {should validate_presence_of :name}
-    it {should validate_presence_of :rating}
+    it {should validate_presence_of :experience}
   end 
 
   describe "relationships" do 
-    it {should belong_to :park}
     it {should have_many :mechanic_rides}
-    it {should have_many(:mechanics).through(:mechanic_rides)}
+    it {should have_many(:rides).through(:mechanic_rides)}
   end
 end

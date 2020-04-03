@@ -1,0 +1,11 @@
+<section class="park-info">
+  <h1><%= @park.name %></h1>
+  <h3><%= @park.price %></h3>
+</section>
+
+<section class="ride-info">
+  <%= @park.name %>'s ride info:</br>
+  <% @park.list_rides.each do |ride| %>
+    <%= ride.name %></br>
+  <% end %>
+</section>

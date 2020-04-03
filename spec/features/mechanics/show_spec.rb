@@ -6,7 +6,6 @@ RSpec.describe "As a user,", type: :feature do
       park_1 = Park.create!(name: "King's Island", price: "$15.00")
 
       ride_1 = Ride.create!(name: "Thunderbolt", rating: 8, park: park_1)
-      ride_2 = Ride.create!(name: "Hello Kitty Island Adventure", rating: 10, park: park_1)
       ride_3 = Ride.create!(name: "The C-", rating: 7, park: park_1)
 
       mechanic_1 = Mechanic.create!(name: "Jordan Sewell", experience: "1000")
@@ -46,8 +45,10 @@ RSpec.describe "As a user,", type: :feature do
         expect(page).to have_content(ride_3.name)
       end
 
-      fill_in :id, with: ride_2.id
-      click_on "Submit"
+      within ".add-ride" do
+        fill_in :id, with: ride_2.id
+        click_on "Submit"
+      end
 
       within ".mechanic-rides" do 
         expect(page).to have_content(ride_1.name)

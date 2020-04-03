@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   #parks 
   get '/parks/:park_id', to: 'parks#show'
 
+  #mechanic_rides 
+  post '/mechanics/:mechanic_id', to: 'mechanic_rides#create'
 
 end

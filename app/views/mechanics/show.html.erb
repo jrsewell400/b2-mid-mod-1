@@ -9,14 +9,14 @@
   Current rides they're working on:</br> 
   <% @mechanic.rides.each do |ride| %>
     <%= ride.name %></br>
-  <% end %>
+  <% end %></br>
 </section>
 
 <section class="add-ride">
-Enter a Ride ID:
+Enter a Ride ID to add:
   <%= form_tag "/mechanics/#{@mechanic.id}" do %>
-    <%= label_tag :ride %>
-    <%= text_field_tag :ride %>
+    <%= label_tag :id %>
+    <%= text_field_tag :id %>
     <%= submit_tag "Submit" %>
   <% end %>
 </section>

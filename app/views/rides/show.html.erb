@@ -1,0 +1,10 @@
+<h1><%= @ride.name %>'s Show Page'</h1>
+<h3>Thrill Rating:  <%= @ride.rating %>
+
+<section class="same-rating">
+  Rides with the same thrill rating:</br>
+  <% @ride.same_rating.each do |ride| %></br>
+    <%= ride.name %></br>
+  <% end %>
+</section>
+

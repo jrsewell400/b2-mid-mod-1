@@ -71,3 +71,30 @@ The Kiss Raise
 Add a ride to workload: 
  _pretent_this_is_a_textfield_
 
+
+Story 4
+As a user,
+When I go to a rides show page
+I see that ride's name, and thrill rating
+I also see a section on the page that is titled "Rides with the same thrill rating."
+Under that title, I see a list of rides from that same park with the same thrill rating of this ride.
+
+
+Story 5
+As a user,
+When I visit the amusement park's show page
+I see that the list of rides is broken up into In Order and Out of Order Rides
+Next to each In Order ride I see a button to mark the ride as Out of Order
+When I click this button I'm returned to the amusement park's show page
+And I see that the ride's name is now under the Out of Order heading
+Likewise, next to each Out of Order ride, I see a button to mark the ride as In Order
+When I click that button
+I'm returned to the amusement park's show page
+And I see that the ride's name is now under the In Order heading.
+
+
+Story 6
+As a user,
+When I go to a mechanics index page
+I see a section on the page titled "Mechanics with The Most Rides"
+And under that title, I see the 3 mechanics with the most rides they're working on

@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   #mechanic_rides 
   post '/mechanics/:mechanic_id', to: 'mechanic_rides#create'
 
+  #rides 
+  get '/rides/:ride_id', to: 'rides#show'
 end
